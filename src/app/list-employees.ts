@@ -1,6 +1,6 @@
 import { Employee } from './employee';
 
-export const Employees: Employee[] = [
+export const EMPLOYEES: Employee[] = [
   { id: 12768733, fname: 'John', lname: 'Tucker' },
   { id: 27248733, fname: 'Adi', lname: 'Ashkenazi' },
   { id: 11168733, fname: 'Zion', lname: 'Turgeman' },
