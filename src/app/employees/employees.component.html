@@ -1,31 +1,6 @@
-<h2>{{employee.fname  | uppercase }} Details</h2>
-<div><span>id: </span>{{employee.id}}</div>
-<div><span>First Name: </span>{{employee.fname}}</div>
-<div><span>Last Name: </span>{{employee.lname}}</div>
-
-<h2>{{employee1.fname  | uppercase }} Details</h2>
-<div><span>id: </span>{{employee1.id}}</div>
-<div><span>First Name: </span>{{employee1.fname}}</div>
-<div><span>Last Name: </span>{{employee1.lname}}</div>
-
-<br>
-<div>
-    <label for="fname">Employee first name: </label>
-    <br>
-    <input id="fname" [(ngModel)]="employee.fname" placeholder="fname">
-    <br>
-    <label for="lname">Employee last name: </label>
-    <br>
-    <input id="lname" [(ngModel)]="employee.lname" placeholder="lname">
-  </div>
-
-  <br>
-<div>
-    <label for="fname">Employee1 first name: </label>
-    <br>
-    <input id="fname" [(ngModel)]="employee1.fname" placeholder="fname">
-    <br>
-    <label for="lname">Employee1 last name: </label>
-    <br>
-    <input id="lname" [(ngModel)]="employee1.lname" placeholder="lname">
-  </div>
+<h2>My Staff</h2>
+<ul class="employee">
+  <li>
+    <span class="badge">{{employee.id}}</span> {{employee.fname}}
+  </li>
+</ul>
