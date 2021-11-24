@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { Employee } from '../employee';
-import { Employees } from '../list-employees';
+import { Employee } from '../employee';
+import { EMPLOYEES } from '../list-employees';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { Employees } from '../list-employees';
 })
 export class EmployeesComponent implements OnInit {
 
-  employee = Employees;
+  employees = EMPLOYEES;
 
   constructor() { }
 
