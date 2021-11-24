@@ -7,3 +7,25 @@
 <div><span>id: </span>{{employee1.id}}</div>
 <div><span>First Name: </span>{{employee1.fname}}</div>
 <div><span>Last Name: </span>{{employee1.lname}}</div>
+
+<br>
+<div>
+    <label for="fname">Employee first name: </label>
+    <br>
+    <input id="fname" [(ngModel)]="employee.fname" placeholder="fname">
+    <br>
+    <label for="lname">Employee last name: </label>
+    <br>
+    <input id="lname" [(ngModel)]="employee.lname" placeholder="lname">
+  </div>
+
+  <br>
+<div>
+    <label for="fname">Employee1 first name: </label>
+    <br>
+    <input id="fname" [(ngModel)]="employee1.fname" placeholder="fname">
+    <br>
+    <label for="lname">Employee1 last name: </label>
+    <br>
+    <input id="lname" [(ngModel)]="employee1.lname" placeholder="lname">
+  </div>
