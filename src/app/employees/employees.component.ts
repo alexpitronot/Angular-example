@@ -11,6 +11,10 @@ import { EMPLOYEES } from '../list-employees';
 export class EmployeesComponent implements OnInit {
 
   employees = EMPLOYEES;
+  selectedemployee?: Employee;
+  onSelect(employee: Employee): void {
+  this.selectedEmployee = employee;
+}
 
   constructor() { }
 
