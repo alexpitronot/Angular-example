@@ -1,6 +1,6 @@
 <h2>My Staff</h2>
 <ul class="employee">
-  <li>
+    <li *ngFor="let employee of employees">
     <span class="badge">{{employee.id}}</span> {{employee.fname}}
   </li>
 </ul>
