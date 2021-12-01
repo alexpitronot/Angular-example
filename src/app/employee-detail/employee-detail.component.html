@@ -1,14 +1,23 @@
 <div *ngIf="employee">
 
-    <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details</h2>
-    <div><span>id: </span>{{employee.id}}</div>
-  <div>
-    <label for="employee-fname">Employee first name: </label>
-    <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
-    <br>
-    <label for="employee-lname">Employee last name: </label>
-    <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
-  </div>
-  
-  </div>
+  <h2>{{employee.fname | uppercase}} {{employee.lname | uppercase}} Details</h2>
+  <div><span>id: </span>{{employee.id}}</div>
+<div>
+  <label for="employee-fname">Employee first name: </label>
+  <input id="employee-fname" [(ngModel)]="employee.fname" placeholder="fname">
   <br>
+  <label for="employee-lname">Employee last name: </label>
+  <input id="employee-lname" [(ngModel)]="employee.lname" placeholder="lname">
+  <br>
+  <label for="employee-dateofbirth">Date of birth: </label>
+  <input disabled id="employee-dateofbirth" [(ngModel)]="employee.dateofbirth" placeholder="dateofbirth">
+  <br>
+  <label for="employee-salary">Salary: </label>
+  <input id="employee-salary" [(ngModel)]="employee.salary" placeholder="salary">
+  <br>
+  <label for="employee-salary">E-mail: </label>
+  <a href="mailto:{{employee.email}}" >{{employee.email}}</a>
+</div>
+
+</div>
+<br>
