@@ -1,7 +1,8 @@
-import { CurrencyPipe } from "@angular/common";
-
 export interface Employee {
-    id: number;
-    fname: string;
-    lname: string;
-  }
+      id: number;
+      fname: string;
+      lname: string;
+      dateofbirth: string;
+      salary: number;
+      email: string;
+    }    

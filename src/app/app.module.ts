@@ -9,7 +9,9 @@ import { HelloWorldDependencyInjectionComponent } from './hello-world-di/hello-w
 import { HelloWorldInterpolationComponent } from './hello-world-interpolation/hello-world-interpolation.component';
 import { HelloWorldBindingsComponent } from './hello-world-bindings/hello-world-bindings.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 
 
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
     HelloWorldDependencyInjectionComponent,
     HelloWorldInterpolationComponent,
     HelloWorldBindingsComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    FooterComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
