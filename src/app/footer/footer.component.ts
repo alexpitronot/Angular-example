@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { socialButton } from '../socialButton';
 import { SOCIALBUTTONS } from '../list-socialButtons';
 
 @Component({

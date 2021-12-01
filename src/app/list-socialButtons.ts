@@ -16,4 +16,9 @@ export const SOCIALBUTTONS: socialButton[] = [
     url: 'https://instagram.com',
     icon: 'https://i.pinimg.com/originals/a4/74/e8/a474e8b91c3ddc13b4f161c0947aa3e9.png',
   },
+  {
+    name: 'tiktok',
+    url: 'https://tiktok.com',
+    icon: 'https://www.techadvisor.com/cmsdata/features/3698642/how-to-use-tiktok-main_thumb900_1-1.png',
+  }
 ];
