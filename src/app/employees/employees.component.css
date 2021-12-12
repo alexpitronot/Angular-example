@@ -78,16 +78,8 @@ input {
   padding: .5rem;
 }
 
-.visitcard {
-  border: navy 2px solid;  
-  border-radius: 10px;
-  background-color: rgb(204, 172, 113);
-  padding: 1.3em;
-  height: max-content;  
-}
-
 .wrapper {
   display: grid;  
-  grid-template-columns: auto auto;
-  justify-content: space-around;
+  grid-template-columns: 50% 30%;
+  justify-items: center;
 }
