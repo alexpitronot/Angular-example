@@ -11,5 +11,5 @@ export const EMPLOYEES: Employee[] = [
   { id: 45768733, fname: 'Meir', lname: 'Alul', dateofbirth: '1/12/87', salary: 3400, email: 'meir@gmail.com' },
   { id: 12734443, fname: 'Mor', lname: 'Sharon', dateofbirth: '11/10/88', salary: 5600, email: 'morsharon@gmail.com' },
   { id: 21206873, fname: 'Tim', lname: 'Dodge', dateofbirth: '1/5/97', salary: 7400, email: 'tim@gmail.com' },
-  { id: 20206873, fname: 'Noam', lname: 'Tor', dateofbirth: '8/3/90', salary: 5400, email: 'noam12@gmail.com' }
+  { id: 20206873, fname: 'Noam', lname: 'Tor', dateofbirth: '8/3/90', salary: 5400, email: 'noam1234@gmail.com' }
 ];
