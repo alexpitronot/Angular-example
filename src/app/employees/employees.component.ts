@@ -13,7 +13,7 @@ export class EmployeesComponent implements OnInit {
   employees = EMPLOYEES;
   selectedEmployee?: Employee;
   onSelect(employee: Employee): void {
-  this.selectedEmployee = employee;
+  this.selectedEmployee = employee;  
 }
 
   constructor() { }
