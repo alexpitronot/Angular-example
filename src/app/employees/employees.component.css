@@ -83,7 +83,7 @@ input {
   border-radius: 10px;
   background-color: rgb(204, 172, 113);
   padding: 1.3em;
-  height: max-content;
+  height: max-content;  
 }
 
 .wrapper {
