@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 //import { EMPLOYEES } from '../list-employees';
 import { EmployeeService } from '../employee.service';
+import { MessageService } from '../message.service';
 
 
 @Component({
@@ -12,10 +13,12 @@ import { EmployeeService } from '../employee.service';
 export class EmployeesComponent implements OnInit {
 
   //employees = EMPLOYEES;
-  employees: Employee[] = [];
   selectedEmployee?: Employee;
+  employees: Employee[] = [];  
+
   onSelect(employee: Employee): void {
-  this.selectedEmployee = employee;  
+  this.selectedEmployee = employee;
+  this.messageService.add(`Employee Component: Selected employee id=${employee.id}`); 
 }
 
 getEmployees(): void {
@@ -24,7 +27,7 @@ getEmployees(): void {
       .subscribe(employees => this.employees = employees);
 }
 
-constructor(private employeeService: EmployeeService) {}
+constructor(private employeeService: EmployeeService, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.getEmployees();
