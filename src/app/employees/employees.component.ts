@@ -33,4 +33,18 @@ constructor(private employeeService: EmployeeService, private messageService: Me
     this.getEmployees();
   }
     
+add(fname: string): void {
+  fname = fname.trim();
+    if (!fname) { return; }
+    this.employeeService.addEmployee({ fname } as Employee)
+      .subscribe(employee => {
+        this.employees.push(employee);
+      });
+   }
+
+delete(employee: Employee): void {
+  this.employees = this.employees.filter(h => h !== employee);
+  this.employeeService.deleteEmployee(employee.id).subscribe();
+  }
 }
+
