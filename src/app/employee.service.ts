@@ -19,4 +19,10 @@ export class EmployeeService {
     return employees;
   }
   constructor(private messageService: MessageService) { }
+
+  getEmployee(id: number): Observable<Employee> {   
+    const employee = EMPLOYEES.find(h => h.id === id)!;
+    this.messageService.add(`Employee Service: fetched employee id=${id}`);
+    return of(employee);
+  }
 }
