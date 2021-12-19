@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SendemailComponent } from './sendemail/sendemail.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -28,11 +31,14 @@ import { MessagesComponent } from './messages/messages.component';
     EmployeesComponent,
     FooterComponent,
     EmployeeDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    SendemailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

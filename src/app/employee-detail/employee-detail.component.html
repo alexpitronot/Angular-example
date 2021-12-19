@@ -15,10 +15,14 @@
     <input id="employee-salary" [(ngModel)]="employee.salary" placeholder="salary">
   
     <label for="employee-salary">E-mail: </label>
-    <a href="mailto:{{employee.email}}" >{{employee.email}}</a>
+    <div><input id="employee-email" [(ngModel)]="employee.email" placeholder="email"> <input type="button" value="Send email" (click)="onSelect(employee)"></div>
   </div>
   
   </div>
-  
-</div>
   <br>
+  <div>
+    <app-sendemail [employee]="selectedEmployee"></app-sendemail>
+  </div>
+</div>
+
+  

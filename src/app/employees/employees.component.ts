@@ -13,18 +13,18 @@ import { MessageService } from '../message.service';
 export class EmployeesComponent implements OnInit {
 
   //employees = EMPLOYEES;
-  selectedEmployee?: Employee;
+  //selectedEmployee?: Employee;
   employees: Employee[] = [];  
 
   onSelect(employee: Employee): void {
-  this.selectedEmployee = employee;
+  //this.selectedEmployee = employee;
   this.messageService.add(`Employee Component: Selected employee id=${employee.id}`); 
 }
 
 getEmployees(): void {
   //this.employees = this.employeeService.getEmployees();
   this.employeeService.getEmployees()
-      .subscribe(employees => this.employees = employees);
+  .subscribe(employees => this.employees = employees);
 }
 
 constructor(private employeeService: EmployeeService, private messageService: MessageService) {}
