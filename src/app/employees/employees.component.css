@@ -90,9 +90,10 @@ input {
 }
 
 .add-button {
-  padding: .5rem 1.5rem;
+  padding: .4rem 1.5rem;
   font-size: 1rem;
   margin-bottom: 2rem;
+  margin-left: 0.2em;
  }
  
  .add-button:hover {
@@ -101,8 +102,7 @@ input {
  }
  
  button.delete {
-   position: absolute;
-   left: 210px;
+   position: absolute;   
    top: 5px;
    background-color: white;
    color:  #525252;
@@ -113,4 +113,5 @@ input {
  button.delete:hover {
    background-color: #525252;
    color: white;
+   cursor: pointer;
  }

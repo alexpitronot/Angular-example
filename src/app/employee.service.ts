@@ -91,7 +91,7 @@ export class EmployeeService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<Employee[]>(`${this.employeesUrl}/?name=${term}`).pipe(
+    return this.http.get<Employee[]>(`${this.employeesUrl}/?fname=${term}`).pipe(
       tap(x => x.length ?
          this.log(`found Employees matching "${term}"`) :
          this.log(`no Employees matching "${term}"`)),
