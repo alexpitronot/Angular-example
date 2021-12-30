@@ -13,27 +13,45 @@ import { EmployeeService } from '../employee.service';
   templateUrl: './employee-search.component.html',
   styleUrls: [ './employee-search.component.css' ]
 })
+
 export class EmployeeSearchComponent implements OnInit {
   employees$!: Observable<Employee[]>;
   private searchTerms = new Subject<string>();
+  searchTerm = ['by id', 'by name', 'by salary'];
+  searchtermnew = 0
 
   constructor(private employeeService: EmployeeService) {}
 
   // Push a search term into the observable stream.
-  search(term: string): void {
+  search(term: string, searchterm: string): void {
     this.searchTerms.next(term);
+    
+    switch (searchterm) {
+      case ('by id'): {
+        this.searchtermnew = 0
+        break
+      }
+      case ('by name'): {
+        this.searchtermnew = 1
+        break
+      }
+      case ('by salary'): {
+        this.searchtermnew = 2
+        break
+      }
+    }      
   }
 
   ngOnInit(): void {
     this.employees$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
-      debounceTime(300),
+      debounceTime(0),
 
       // ignore new term if same as previous term
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.employeeService.searchEmployees(term)),
+      switchMap((term: string) => this.employeeService.searchEmployees(term,this.searchtermnew)),
     );
   }
 }

@@ -37,8 +37,7 @@ export class EmployeeService {
     return this.http.get<Employee>(url).pipe(
       tap(_ => this.log(`fetched employee id=${id}`)),
       catchError(this.handleError<Employee>(`getEmployee id=${id}`))
-  );
-   
+  );   
   }
 
   private log(message: string) {
@@ -86,12 +85,18 @@ export class EmployeeService {
     );
   }
 
-  searchEmployees(term: string): Observable<Employee[]> {
+  searchEmployees(term: string, searchterm: number): Observable<Employee[]> {
     if (!term.trim()) {
       // if not search term, return empty hero array.
       return of([]);
-    }
-    return this.http.get<Employee[]>(`${this.employeesUrl}/?fname=${term}`).pipe(
+    }    
+
+    var searchtermnew = ''
+    if (searchterm==0) {searchtermnew='id'}
+    if (searchterm==1) {searchtermnew='lname'}
+    if (searchterm==2) {searchtermnew='salary'}
+
+    return this.http.get<Employee[]>(`${this.employeesUrl}/?${searchtermnew}=${term}`).pipe(
       tap(x => x.length ?
          this.log(`found Employees matching "${term}"`) :
          this.log(`no Employees matching "${term}"`)),
