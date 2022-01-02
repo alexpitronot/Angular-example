@@ -14,7 +14,7 @@
 <div class="employeestable">
 <table class="employees">
     <tr class="mainrow"><th>Check all</th><th>Employee ID</th><th>First Name</th><th>Last Name</th><th>Date of birth</th><th>Salary</th><th>E-mail</th></tr>    
-    <tr *ngFor="let employee of employees" class="employees">       
+    <tr *ngFor="let employee of employees | slice:0:show" class="employees">       
          <td class="employees"><!--<input type="checkbox">--><button class="delete" title="delete employee" 
           (click)="delete(employee)">x</button></td> 
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.id}}</td> 
@@ -23,7 +23,9 @@
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.dateofbirth}}</td>
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.salary}}</td>
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.email}}</td>      
-    </tr>     
+    </tr>   
+    <tr *ngIf="show == 5" class="employees"><td colspan="7" class="employees"><button (click)="show = employees.length"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-down-45.png" alt="" (click)="show = employees.length"/></button></td></tr>
+    <tr *ngIf="show == employees.length" class="employees"><td colspan="7" class="employees"><button (click)="show = 5"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-up-45.png" alt="" /></button></td></tr>  
 </table>
 </div>
 <!-- <ul class="employees">

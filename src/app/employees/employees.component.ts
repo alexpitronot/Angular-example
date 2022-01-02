@@ -8,13 +8,16 @@ import { MessageService } from '../message.service';
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.css']
+  styleUrls: ['./employees.component.css'],
+  providers: [EmployeeService]
 })
 export class EmployeesComponent implements OnInit {
 
   //employees = EMPLOYEES;
   //selectedEmployee?: Employee;
   employees: Employee[] = [];  
+  show = 5
+  i = 0
 
   onSelect(employee: Employee): void {
   //this.selectedEmployee = employee;

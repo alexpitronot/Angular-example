@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { EmployeeSearchComponent } from './employee-search/employee-search.component';
+import { EmployeeService } from './employee.service';
+import { MessageService } from './message.service';
 
 
 
@@ -49,7 +51,7 @@ import { EmployeeSearchComponent } from './employee-search/employee-search.compo
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [],
+  providers: [InMemoryDataService, EmployeeService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
