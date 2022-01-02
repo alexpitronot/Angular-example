@@ -17,7 +17,7 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeSearchComponent implements OnInit {
   employees$!: Observable<Employee[]>;
   private searchTerms = new Subject<string>();
-  searchTerm = ['by id', 'by name', 'by salary'];
+  searchTerm = ['by id', 'by last name', 'by salary'];
   searchtermnew = 0
 
   constructor(private employeeService: EmployeeService) {}
@@ -31,7 +31,7 @@ export class EmployeeSearchComponent implements OnInit {
         this.searchtermnew = 0
         break
       }
-      case ('by name'): {
+      case ('by last name'): {
         this.searchtermnew = 1
         break
       }
