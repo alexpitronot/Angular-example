@@ -24,8 +24,14 @@
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.salary}}</td>
         <td class="employees" routerLink="/detail/{{employee.id}}">{{employee.email}}</td>      
     </tr>   
-    <tr *ngIf="show == 5" class="employees"><td colspan="7" class="employees"><button (click)="show = employees.length"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-down-45.png" alt="" (click)="show = employees.length"/></button></td></tr>
-    <tr *ngIf="show == employees.length" class="employees"><td colspan="7" class="employees"><button (click)="show = 5"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-up-45.png" alt="" /></button></td></tr>  
+    <tr *ngIf="show == 5" class="employees">
+      <td colspan="7" class="employees"><button (click)="show = employees.length"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-down-45.png" alt="" /></button>
+      </td>
+    </tr>
+    <tr *ngIf="show == employees.length" class="employees">
+      <td colspan="7" class="employees"><button (click)="show = 5"><img src="https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-up-45.png" alt="" /></button>
+      </td>
+    </tr>  
 </table>
 </div>
 <!-- <ul class="employees">
